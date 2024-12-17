@@ -1,0 +1,1 @@
+24 hour [[civil commitments]] for [[mental health]] treatment 

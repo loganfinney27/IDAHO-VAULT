@@ -1,0 +1,1 @@
+subject to [[strict scrutiny]] under [[U.S. Constitution]] and [[Idaho Constitution]] 

@@ -1,0 +1,6 @@
+---
+tags:
+  - people
+---
+
+[[Idaho Dispatch]] 

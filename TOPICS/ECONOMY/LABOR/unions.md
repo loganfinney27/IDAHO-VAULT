@@ -1,0 +1,5 @@
+---
+aliases:
+  - labor union
+  - union
+---

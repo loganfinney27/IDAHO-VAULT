@@ -1,0 +1,1 @@
+[[helicopter]] used for [[emergency medical services]] 

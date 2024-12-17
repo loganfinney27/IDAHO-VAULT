@@ -1,0 +1,1 @@
+[[magistrate court]] [[Ada County]] [[courthouses|courthouse]] 

@@ -1,0 +1,1 @@
+agreed adjournment between the [[Idaho House of Representatives]] and [[Idaho Senate]] 

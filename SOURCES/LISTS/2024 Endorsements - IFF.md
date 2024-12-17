@@ -1,0 +1,63 @@
+---
+tags:
+  - 2024/election
+  - 2023/10/02
+  - 2023/11/02
+  - 2023/05/12
+  - 2023/12/12
+  - 2024/04/25
+---
+Supported by [[Idaho Freedom PAC]] for 2024 [[Idaho Legislature]] elections.
+
+- [[Scott Herndon]] for [[Legislative District 1|LD1]] Senate (10/02/2023)
+- [[Cornel Rasor]] for [[Legislative District 1|LD1]] House A (11/02/2023)
+- [[Phil Hart]] for [[Legislative District 2|LD2]] Senate (04/25/2024)
+- [[Heather Scott]] for [[Legislative District 2|LD2]] House A (04/25/2024)
+- [[Dale Hawkins]] for [[Legislative District 2|LD2]] House B (04/25/2024)
+- [[Vito Barbieri]] for [[Legislative District 3|LD3]] House A (04/25/2024)
+- [[Jordan Redman]] for [[Legislative District 3|LD3]] House B (04/25/2024)
+- [[Ben Toews]] for [[Legislative District 4|LD4]] Senate (04/25/2024)
+- [[Joe Alfieri]] for [[Legislative District 4|LD4]] House **A** (04/25/2024)
+- [[Elaine Price]] for [[Legislative District 4|LD4]] House B (04/25/2024)
+- [[Tony Wisniewski]] for [[Legislative District 5|LD5]] House B (04/25/2024)
+- [[Dan Foreman]] for [[Legislative District 6|LD6]] Senate (04/25/2024)
+- [[Cindy Carlson]] for [[Legislative District 7|LD7]] Senate (04/25/2024)
+- [[Kyle Harris]] for [[Legislative District 7|LD7]] House A (04/25/2024)
+- [[Larry Dunn]] for [[Legislative District 7|LD7]] House B (04/25/2024)
+- [[Christy Zito]] for [[Legislative District 8|LD8]] Senate (05/12/2023)
+- [[Rob Beiswenger]] for [[Legislative District 8|LD8]] House A (10/02/2023)
+- [[Faye Thompson]] for [[Legislative District 8|LD8]] House B (04/25/2024)
+- [[Brandon Shippy]] for [[Legislative District 9|LD9]] Senate (10/02/2023)
+- [[Jacyn Gallagher]] for [[Legislative District 9|LD9]] House A (12/12/2023)
+- [[Tammy Nichols]] for [[Legislative District 10|LD10]] Senate (12/12/2023)
+- [[Rachel Hazelip]] for [[Legislative District 10|LD10]] (04/25/2024)
+- [[Kent Marmon]] for [[Legislative District 11|LD11]] House A (11/02/2023)
+- [[Lucas Cayler]] for [[Legislative District 11|LD11]] House B (11/02/2023)
+- [[Jarome Bell]] for [[Legislative District 12|LD12]] House A (04/25/2024)
+- [[Brian Lenney]] for [[Legislative District 13|LD13]] Senate (10/02/2023)
+- [[Steve Tanner]] for [[Legislative District 13|LD13]] House B (04/25/2024)
+- [[Josh Tanner]] for [[Legislative District 14|LD14]] House B (04/25/2024)
+- [[Jackie Davidson]] for [[Legislative District 16|LD16]] House B (04/25/2024)
+- [[Benjamin Chafetz]] for [[Legislative District 17|LD17]] Senate (04/25/2024)
+- [[Jim Feederle]] for [[Legislative District 19|LD19]] House A (04/25/2024)
+- [[Josh Keyser]] for [[Legislative District 20|LD20]] Senate (12/12/2023)
+- [[Brenda Bourn]] for [[Legislative District 21|LD21]] Senate (04/25/2024)
+- [[Chris Bruce]] for [[Legislative District 23|LD23]] House A (04/25/2024)
+- [[Tina Lambert]] for [[Legislative District 23|LD23]] House B (04/25/2024)
+- [[Glenneda Zuiderveld]] for [[Legislative District 24|LD24]] Senate (11/02/2023)
+- [[Clint Hostetler]] for [[Legislative District 24|LD24]] House A (04/25/2024)
+- [[Josh Kohl]] for [[Legislative District 25|LD25]] Senate (04/25/2024)
+- [[David Leavitt]] for [[Legislative District 25|LD25]] House B (04/25/2024)
+- [[Kally Schiffler]] for [[Legislative District 26|LD26]] House A (04/25/2024)
+- [[Lyle Johnstone]] for [[Legislative District 26|LD26]] House B (04/25/2024)
+- [[Patrick Field]] for [[Legislative District 27|LD27]] House B (04/25/2024)
+- [[James Lamborn]] for [[Legislative District 28|LD28]] House A (04/25/2024)
+- [[Kirk Jackson]] for [[Legislative District 28|LD28]] House B (04/25/2024)
+- [[Tanya Burgoyne]] for [[Legislative District 29|LD29]] House B (04/25/2024)
+- [[Julianne Young]] for [[Legislative District 30|LD30]] House B (04/25/2024)
+- [[Karey Hanks]] for [[Legislative District 31|LD31]] House B (10/02/2023)
+- [[Kelly Golden]] for [[Legislative District 32|LD32]] House A (04/25/2024)
+- [[Bryan Smith]] for [[Legislative District 32|LD32]] House B (04/25/2024)
+- [[Bryan Scholz]] for [[Legislative District 33|LD33]] Senate (04/25/2024)
+- [[Jilene Burger]] for [[Legislative District 33|LD33]] House B (04/25/2024)
+- [[Brett Skidmore]] for [[Legislative District 35|LD35]] House B (11/02/2023)

@@ -1,0 +1,53 @@
+---
+author:
+  - "[[Logan Finney]]"
+outlet:
+  - "[[Idaho Reports]]"
+URL: https://blog.idahoreports.idahoptv.org/2023/09/27/podcast-quagga-mussels-detected-in-snake-river/
+tags:
+  - media/podcasts
+  - 2023/09/27
+---
+*The [[State of Idaho|Idaho]] State [[Department of Agriculture]] announced last week the presence of invasive quagga mussel larvae in the [[Snake River]] near [[Twin Falls]]. Director [[Chanel Tewalt]] joins Logan Finney to discuss what this means for Idaho and the state’s response plan.*
+
+[[Logan Finney]], [[Idaho Reports]]: The Idaho State Department of Agriculture announced last week the presence of quagga mussel larvae had been found in the [[Snake River]] near Twin Falls. Joining me to discuss what this means for Idaho, and the state’s response, is director Chanel Tewalt from the Department of Agriculture. Chanel, thanks for joining us.
+
+[[Chanel Tewalt]], Idaho State Department of Agriculture: Logan, thank you for having us.
+
+IR: Let’s start with the basics here. What are [[quagga mussels]]?
+
+Tewalt: Quagga mussels are one of the [[invasive species]] that we have been monitoring for for about 15 years. We have run a program out of the ISDA to try to ensure that these are not introduced into Idaho. This particular invasive mussel is highly devastating to the ecosystems where it has been introduced in other places in the U.S. What we see in other locations like the Great Lakes and some of the Colorado River Basin is just how prolific and invasive these species can be. And they outcompete native species. They really choke out waterways in terms of other species, plant and animal life that may be in a river. They also affect pipes and drainages and things like that. That is a huge concern for us in the West, where we are heavily dependent on [[irrigation]] and of course, [[hydropower]] generation as well.
+
+IR: How did the Idaho State Department of Agriculture come across these mussels? And my understanding is it’s larvae that were detected in the water, not actually fully-grown hard-shell mussels at this point?
+
+Tewalt: That’s correct. Yes. We found basically free-floating larvae in the water. A lot of Idahoans have seen our [[boat check stations]], and since we started this program, we’ve done about a million [[watercraft inspections]] across the state. But many Idahoans aren’t aware of the fact that we also every year do thousands and thousands of water samples as well, to monitor what’s happening in our waterways currently. We look for [[boats]], but we also monitor water, and that’s how we found these and confirmed these samples, actually, because we were actively out looking for them. That early detection is so important in responding to emergencies like this. We want to know as soon as possible so we can deploy a response plan. We detected the larva near Centennial Park, near Twin Falls, in the [[Snake River]] through this routine monitoring that we have conducted for many years.
+
+IR: And just to be clear, you guys are doing this monitoring in water bodies all over the state?
+
+Tewalt: All over the state. So, we every single year perform thousands of samples in water bodies across Idaho, constantly looking for quagga and [[zebra mussels]]. As well as other types of species too, but a lot of attention, obviously, on quagga and zebra mussels.
+
+IR: As you mentioned, these samples were found near the Twin Falls area in the Snake River. What’s the response plan, now that you guys have come across a positive sample?
+
+Tewalt: We have prepared for many, many years, as do other states in the Pacific Northwest, to respond to this type of emergency. So, we’re always looking actively trying to prevent introduction, but we also make plans all the time for if we find something. And so, we were able to jump into action immediately. We confirmed the presence of the [[quagga mussel]] larvae on Monday (9/18), communicated that, had a whole government response by Monday afternoon – meaning all state agencies who are impacted by this, we were on the phone talking about it. In less than 24 hours, we had our team deployed on and around the river to do additional sampling and to make sure that we’ve got boats off the river so we don’t further contaminate any other waters. The response has been very aggressive and very quick.
+
+IR: Have you had any sort of communications with your counterparts in [[Oregon]] and [[Washington]]? Do we know how they got so far up the Snake River Basin?
+
+Tewalt: Part of our planning efforts include early notification to our state partners. We do a lot of collaborative work in this area, and that extends not just to the other Pacific Northwest states, but also [[Canada|Canadian]] provinces as well who have a vested interest in trying to mitigate the spread of invasive species. So, we work together all the time. We have formal and informal notification processes that we went through this week to let the other states know that we are right now in the emergency response phase. Other partner states were notified, and then as I mentioned, state agencies, federal agencies, all of the local jurisdictions as well. We provided very early notifications. Almost as soon as we knew, that notification was made to the governor and then to local jurisdictions. They have been working with us hand-in-glove to implement basically all of the response that we need to get out on the ground. We can’t thank the local jurisdictions enough, from the [[counties]] to the [[cities]], county law enforcement, county weed departments, the city of Twin Falls Chamber of Commerce, all of those partners have just been instrumental in us being able to respond really quickly on the river and we can’t thank them enough.
+
+IR: What sort of role does [[law enforcement]] play in this?
+
+Tewalt: Law enforcement from the local jurisdictions, they have been very helpful and will be instrumental in helping also the public understand. I appreciate that we’re working so quickly that maybe every Idahoan in the [[Magic Valley]] doesn’t know that there is a restriction to river access right now. So, we obviously want to work with folks first to help them understand that this is something where we need their cooperation and assistance. Law enforcement have been incredibly helpful in that process, not only in helping interact with the public, but also providing resources from their search and rescue teams on diving and all that technical kind of expertise on the river, too. So we appreciate their help and their ongoing assistance as well.
+
+IR: How can the public play a role here? Somebody who’s not part of a government agency but has a boat or is an irrigator and is concerned about this issue, what can the average Idahoan do to participate?
+
+Tewalt: Idahoans have always been the greatest asset in this program. We have been able to have a successful program for 15 years because of public participation. Once again, we call on Idahoans to help us in this effort. What we need right now is, for this small impacted part of the river, we need everyone to stay off the river as we actively survey, and at some point in the near future, very near future, we’re going to be implementing a treatment as well. We need that treatment not to come in contact with people, and we need to make sure folks aren’t spreading these microscopic larvae anywhere else in the river system. So, we need just that public partnership on staying off the river, temporarily, while we work on this issue. It is incredibly important, and I don’t know that everyone realizes necessarily, it’s not just boats that we’re talking about. When we are talking about microscopic larva in the water, anything that goes in the water can possibly be a conveyance. That means [[kayaks]], [[paddleboards]], waders, duck decoys, [[fishing]] tackle, all of those sorts of things. All of those activities right now are prohibited on the water so we prevent further spread, and so we can actively go through treatment as well. 
+
+So public participation is so important, but also anyone who understands this issue, sharing that with your neighbors and helping folks understand why we’re doing this. Idaho law requires this kind of response from the State Department of Agriculture. It is something that has been thought about for many years. That immediate response to help irrigators, recreators, the power companies, all the folks who use and love Idaho’s waterways. This kind of response is what we need from everybody and really, truly understanding the gravity of what we’re talking about as well. It may not be something that everyone was aware of before they saw this news, but these types of invasive species have been so hugely detrimental to other ecosystems. When we look at the Great Lakes, for instance, the Great Lakes area receives hundreds of millions of dollars every year for cleanup efforts, just to deal with these types of species. That is not even a system that has irrigation like we do in Idaho, or hydropower generation. So, when you add on those two really important water uses, you can start to think about just how impactful this would be for Idaho and the way that we use our water.
+
+IR: You mentioned a moment ago treatment of the river. Can you give me any sort of details on that?
+
+Tewalt: Absolutely. We have launched into a very quick response to pull in state and federal partners on possible treatment options. We know that we also need to do some expectation setting with the public. Right now, today, we have a small impacted part of the river. If we don’t treat this part of the river as best we can, if we don’t try to mitigate this issue, we know that this species will take over large portions of the river. So right now, we’re talking about treatment in a small area. That kind of treatment plan has to be quick, but it has to be done right as well. We have to make sure we’re using products that can be used in this way. That we’re going through any permitting that we have to do, that federal partners from [[U.S. Fish and Wildlife Service|Fish and Wildlife]] and [[Environmental Protection Agency|EPA]] and all those agencies also understand what we’re doing. And that the public understands that it’s nobody’s preferred option to have to deal with this issue, but if we don’t deal with the issue when it’s very small, it is going to be a much bigger problem for all of Idaho.
+
+IR: All right. Director Chanel Tewalt from the Idaho State Department of Agriculture, thanks for making time for us.
+
+Tewalt: Logan, thanks so much for spreading awareness on this issue.

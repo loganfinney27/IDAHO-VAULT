@@ -1,0 +1,1 @@
+[[magistrate court]] [[Bonneville County]] [[courthouses|courthouse]] 

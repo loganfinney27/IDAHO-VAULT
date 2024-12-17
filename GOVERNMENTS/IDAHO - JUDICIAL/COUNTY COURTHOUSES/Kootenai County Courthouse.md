@@ -1,0 +1,1 @@
+[[magistrate court]] [[Kootenai County]] [[courthouses|courthouse]] 

@@ -1,0 +1,1 @@
+[[Judaism|Jewish]] [[places of worship]] 

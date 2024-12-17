@@ -1,0 +1,1 @@
+[[TOPICS/STATE AFFAIRS/LGBTQ+ issues]] [[Idaho Constitution]] 

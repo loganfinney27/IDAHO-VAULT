@@ -1,0 +1,1 @@
+[[County Sheriff]], [[Bingham County]] [[jails|jail]]

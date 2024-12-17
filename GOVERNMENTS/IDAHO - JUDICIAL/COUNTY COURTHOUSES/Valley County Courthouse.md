@@ -1,0 +1,1 @@
+[[magistrate court]] [[Valley County]] [[courthouses|courthouse]] 

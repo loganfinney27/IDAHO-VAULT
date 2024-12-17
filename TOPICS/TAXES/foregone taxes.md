@@ -1,0 +1,1 @@
+earmarked uncollected [[property tax budget]] allowance that [[taxing districts]] can claim in future years 

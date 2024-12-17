@@ -1,0 +1,4 @@
+---
+aliases:
+  - Cabela's
+---

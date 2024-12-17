@@ -1,0 +1,1 @@
+[[County Sheriff]], [[Lincoln County]] [[jails|jail]]

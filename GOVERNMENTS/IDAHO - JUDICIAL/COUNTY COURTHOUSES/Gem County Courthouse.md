@@ -1,0 +1,1 @@
+[[magistrate court]] [[Gem County]] [[courthouses|courthouse]] 

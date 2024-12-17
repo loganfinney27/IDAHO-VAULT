@@ -1,0 +1,1 @@
+[[tobacco]] in [[cigarettes]] and [[cigars]] 

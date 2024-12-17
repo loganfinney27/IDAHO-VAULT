@@ -1,0 +1,1 @@
+[[magistrate court]] [[Idaho County]] [[courthouses|courthouse]] 

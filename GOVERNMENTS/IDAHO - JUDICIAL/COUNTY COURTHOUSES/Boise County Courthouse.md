@@ -1,0 +1,1 @@
+[[magistrate court]] [[Boise County]] [[courthouses|courthouse]] 

@@ -1,0 +1,1 @@
+[[County Sheriff]], [[Gooding County]] [[jails|jail]]

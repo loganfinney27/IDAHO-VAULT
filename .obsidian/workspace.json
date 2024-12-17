@@ -1,0 +1,271 @@
+{
+  "main": {
+    "id": "ebc702efcf01541b",
+    "type": "split",
+    "children": [
+      {
+        "id": "30e0e4a3da05a011",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d35460899c590622",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "ATTACHMENTS/MAPS/Snake River Dams.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "Snake River Dams"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d29572634973a0f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bccd219956cfcf7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbfa8ac519a0bb94",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabeticalReverse"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5c9a03e2f4fc85c8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "file:main",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d5de9567351f0e96",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "68a3da340333f42d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "51e0d7f20e7184ea",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 272.50418853759766
+  },
+  "right": {
+    "id": "6ce23fcd82f8b8f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "47230a8d15685efb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd603d0cb422d730",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Idaho Main Street Caucus"
+            }
+          },
+          {
+            "id": "b82a52bf57d389e2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "d91894ec936ba4ef",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d7d4eece6e477aa5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Idaho Main Street Caucus"
+            }
+          },
+          {
+            "id": "f1059e05e1c16478",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b158b9c505382e9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for Idaho Main Street Caucus"
+            }
+          },
+          {
+            "id": "090eff80fb4fcf9e",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "703e18d46572efd5",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {},
+              "icon": "file-digit",
+              "title": "Strange New Worlds"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 388.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false
+    }
+  },
+  "active": "d35460899c590622",
+  "lastOpenFiles": [
+    "SOURCES/HEARINGS/2024/2024-11-19 Water Supply Committee.md",
+    "SOURCES/HEARINGS/2024/2024-01-09 House Judiciary.md",
+    "SOURCES/HEARINGS/2024/2024-02-07 House Business.md",
+    "Mike Gunderson.md",
+    "Little Payette Lake.md",
+    "Payette Lake.md",
+    "Alpha.md",
+    "books.md",
+    "Long Valley.md",
+    "Office of the Attorney General.md",
+    "water rights.md",
+    "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md",
+    "Madison Hardy.md",
+    "pregnancy.md",
+    "The Truth As Told by Mason Buttle.md",
+    "PLACES/GAME UNITS/Dworshak-Elk City Zone.md",
+    "Cascade Dam.md",
+    "PLACES/COMMUNITIES/Warm Lake.md",
+    "executive session.md",
+    "Faye Thompson.md",
+    "X LABELER/2019-10-17 - Shoshone Co. hopeful $22M bond will fix aging, overcrowded jail.md",
+    "2024-05-23 - Idaho Press - Governor seeks outside lawyer in ITD lawsuit.md",
+    "SOURCES/NEWS MEDIA/2021-12-10 - IR - Chronic wasting disease surveillance underway in central Idaho.md",
+    "PLACES/COUNTIES/Idaho County.md",
+    "SOURCES/LISTS/Game Management Units.md",
+    "PLACES/GAME UNITS/Game Management Unit 14.md",
+    "SOURCES/HEARINGS/2024",
+    "X LABELER",
+    "ATTACHMENTS/MAPS/Wildlife Management Units.png",
+    "ATTACHMENTS/DOCUMENTS/Sign_Chart_Supplement.pdf",
+    "ATTACHMENTS/DOCUMENTS/ID Property Tax Limitations and Initiatives 1978–present.pdf",
+    "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 1 - Historic Context.pdf",
+    "ATTACHMENTS/DOCUMENTS/Broadband Strategic Plan.pdf",
+    "ATTACHMENTS/MAPS/Snake River Dams.jpg",
+    "ATTACHMENTS/DOCUMENTS",
+    "ATTACHMENTS/TEMPLATES",
+    "ATTACHMENTS/MAPS",
+    "ATTACHMENTS/MAPS/Legislative District Map 2021.pdf",
+    "Pasted image 20231121102332.png"
+  ]
+}

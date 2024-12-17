@@ -1,0 +1,1 @@
+Willful and unlawful use of force or violence upon the person of another; or actual, intentional and unlawful touching or striking of another person against the will of the other; or unlawfully and intentionally causing bodily harm to an individual.

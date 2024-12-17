@@ -1,0 +1,1 @@
+[[Twin Falls County]] [[County Sheriff|Sheriff]]'s office [[jails|jail]] administrator

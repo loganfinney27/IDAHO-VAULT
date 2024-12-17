@@ -1,0 +1,1 @@
+[[IDACORP]] "[[affordable housing]] and other investments" 

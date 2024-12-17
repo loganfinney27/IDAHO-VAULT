@@ -1,0 +1,1 @@
+exemptions from application of [[sales tax]], [[property tax]], etc.

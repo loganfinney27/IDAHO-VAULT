@@ -1,0 +1,17 @@
+regional [[newspapers|newspaper]] company 
+
+[[State of Idaho|Idaho]]
+- [[Idaho Press]] 
+- [[Post Register]]
+- [[Idaho State Journal]]
+- [[Rexburg Standard Journal]]
+- [[Bingham News Chronicle]]
+- [[Teton Valley News]]
+- [[Jefferson Star]]
+- [[Challis Messenger]]
+- [[Emmett Messenger Index]]
+- [[Kuna Melba News]]
+- [[Meridian Press]]
+- [[Boise Weekly]]
+- [[Preston Citizen]]
+- [[Montpelier News-Examiner]]

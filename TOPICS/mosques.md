@@ -1,0 +1,1 @@
+[[Islam|Muslim]] [[places of worship]] 

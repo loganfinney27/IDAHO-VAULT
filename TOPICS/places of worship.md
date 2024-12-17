@@ -1,0 +1,4 @@
+[[churches]] 
+[[temples]] 
+[[synagogues]] 
+[[mosques]] 

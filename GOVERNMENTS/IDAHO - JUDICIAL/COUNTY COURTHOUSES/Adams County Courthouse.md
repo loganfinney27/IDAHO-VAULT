@@ -1,0 +1,1 @@
+[[magistrate court]] [[Adams County]] [[courthouses|courthouse]] 
