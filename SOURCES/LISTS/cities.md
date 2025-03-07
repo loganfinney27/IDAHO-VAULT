@@ -4,6 +4,8 @@ tags:
   - geography/land/city
 aliases:
   - city
+  - municipalities
+  - municipality
 ---
 The [[State of Idaho]] has 199 incorporated cities 
 - can run [[bond elections]] 

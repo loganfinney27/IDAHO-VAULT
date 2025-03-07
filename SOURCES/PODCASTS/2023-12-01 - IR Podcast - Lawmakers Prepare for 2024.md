@@ -36,7 +36,7 @@ People are happy. We did a good job. But at the same time, those [[property tax 
 
 **IR:**
 
-While the legislative session doesn’t officially get started for at least another month, the ATI conference is often just one item on lawmakers’ agendas as they prepare for the upcoming session. I spoke with Rep. [[Ned Burns]] and Sen. [[Ben Adams]] — each of whom sits on their respective chamber’s [[Senate Local Government and Taxation|tax committees]] — about how they’re getting ready for January and what topics they expect to come up in the [[2024 legislative session|next legislative session]].
+While the legislative session doesn’t officially get started for at least another month, the [[Associated Taxpayers of Idaho|ATI conference]] is often just one item on lawmakers’ agendas as they prepare for the upcoming session. I spoke with Rep. [[Ned Burns]] and Sen. [[Ben Adams]] — each of whom sits on their respective chamber’s [[Senate Local Government and Taxation|tax committees]] — about how they’re getting ready for January and what topics they expect to come up in the [[2024 legislative session|next legislative session]].
 
 **Rep. Ned Burns, D-Bellevue:**
 

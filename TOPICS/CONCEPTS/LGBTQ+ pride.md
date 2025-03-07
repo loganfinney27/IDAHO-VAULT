@@ -1,5 +1,6 @@
 ---
 aliases:
   - Pride
+  - gay pride
 ---
-[[TOPICS/STATE AFFAIRS/LGBTQ+ issues]] 
+[[LGBTQ+ issues]] 

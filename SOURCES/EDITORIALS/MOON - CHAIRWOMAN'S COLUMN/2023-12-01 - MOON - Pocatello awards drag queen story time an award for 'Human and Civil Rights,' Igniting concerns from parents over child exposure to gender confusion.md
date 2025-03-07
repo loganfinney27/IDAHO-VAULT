@@ -13,7 +13,7 @@ https://idgop.org/2023/12/01/pocatello-awards-drag-queen-storytime-an-award-for-
 
 They tell us it’s not happening in [[State of Idaho|Idaho]]. They also tell us it’s a good thing that it is.
 
-Earlier this week, the City of [[Pocatello]] honored a [[drag queen story time]] group with their “Human and Civil Rights” award. They specifically lauded the group for “providing educational spaces for children”.
+Earlier this week, the City of [[Pocatello]] honored a [[drag reading events]] group with their “Human and Civil Rights” award. They specifically lauded the group for “providing educational spaces for children”.
 
 It’s clear that this award was given in response to recent protests by concerned parents against exposing children to [[drag]] events and the [[gender identity|gender confusion]] they promote. It’s no exaggeration to say that there are people out there who really are after your kids and they will call anyone who stands up to them “bigoted” and “hateful.”
 

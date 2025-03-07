@@ -5,4 +5,6 @@ author:
   - "[[Audrey Dutton]]"
 residence: "[[Boise]]"
 ---
-- [[Idaho Capital Sun]] reporter
+- [[ProPublica]] reporter 
+- former [[Idaho Capital Sun]] reporter
+- 

@@ -4,25 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "ed39780fd09f5a77",
+        "id": "67db8e2579844e3a",
         "type": "tabs",
         "children": [
           {
-            "id": "1aaf9a38b02ac28a",
+            "id": "7044ca0eb6ff8d3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PLACES/LIBRARIES/Marshall Public Library.md",
+                "file": "SOURCES/HEARINGS/2025/2025-02-03 House Judiciary, Firing Squad.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Marshall Public Library"
+              "title": "2025-02-03 House Judiciary, Firing Squad"
+            }
+          },
+          {
+            "id": "04b7a01e0ba2fca9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SOURCES/HEARINGS/2025/2025-02-05 House Revenue, Private School Tax Credit.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-02-05 House Revenue, Private School Tax Credit"
+            }
+          },
+          {
+            "id": "6c1614027d2b7db6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.7"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -41,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabeticalReverse"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -53,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file: commission",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,16 +104,6 @@
             }
           },
           {
-            "id": "68a3da340333f42d",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
-          },
-          {
             "id": "51e0d7f20e7184ea",
             "type": "leaf",
             "state": {
@@ -94,7 +113,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -114,7 +134,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PLACES/LIBRARIES/Marshall Public Library.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime",
@@ -124,7 +143,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Marshall Public Library"
+              "title": "Backlinks"
             }
           },
           {
@@ -133,12 +152,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PLACES/LIBRARIES/Marshall Public Library.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Marshall Public Library"
+              "title": "Outgoing links"
             }
           },
           {
@@ -148,7 +166,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "alphabetical",
-                "useHierarchy": true
+                "useHierarchy": false
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -159,11 +177,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Idaho Main Street Caucus"
+              "title": "Outline"
             }
           },
           {
@@ -185,25 +201,13 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "ORGANIZATIONS/PARTIES/GROUPS/Idaho Main Street Caucus.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Idaho Main Street Caucus"
+              "title": "File properties"
             }
           },
           {
             "id": "090eff80fb4fcf9e",
-            "type": "leaf",
-            "state": {
-              "type": "Strange New Worlds",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
-            "id": "703e18d46572efd5",
             "type": "leaf",
             "state": {
               "type": "Strange New Worlds",
@@ -217,7 +221,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 519.5
+    "width": 421.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,34 +233,37 @@
       "templates:Insert template": false
     }
   },
-  "active": "dbfa8ac519a0bb94",
+  "active": "6c1614027d2b7db6",
   "lastOpenFiles": [
+    "GOVERNMENTS/IDAHO - EXECUTIVE/State Tax Commission.md",
+    "SOURCES/HEARINGS/2025/2025-02-05 House Revenue, Private School Tax Credit.md",
+    "SOURCES/HEARINGS/2025/2025-02-03 House Judiciary, Firing Squad.md",
+    "SOURCES/HEARINGS/2025/2025-02-06 Senate Local Gov.md",
+    "SOURCES/LISTS/cities.md",
+    "TOPICS/Deputy Attorney General.md",
+    "SOURCES/PODCASTS/2023-12-01 - IR Podcast - Lawmakers Prepare for 2024.md",
+    "PEOPLE/John Shirts.md",
+    "SOURCES/x hey you make sure to link these/2014-02-20 - Eye on Boise - Protesters allowed to continue to block entrance, Senate in session.md",
+    "ORGANIZATIONS/Associated Taxpayers of Idaho.md",
+    "SOURCES/NEWS MEDIA/2021-06-03 - Idaho Business Review - Jayson Ronk joins Blue Cross of Idaho.md",
+    "PEOPLE/Miguel Legarreta.md",
+    "GOVERNMENTS/IDAHO - EXECUTIVE/Division of Occupational and Professional Licenses.md",
+    "SOURCES/HEARINGS/2024/2024-01-22 House Health Welfare.md",
+    "GOVERNMENTS/IDAHO - EXECUTIVE/DEPARTMENTS/Department of Self-Governing Agencies.md",
+    "GOVERNMENTS/IDAHO - EXECUTIVE/Board of Pharmacy.md",
+    "TOPICS/Counseling Compact.md",
+    "TOPICS/building codes.md",
+    "SOURCES/HEARINGS/2025/2025-01-21 Senate Commerce.md",
+    "ORGANIZATIONS/Building Contractors Association of Southwest Idaho.md",
+    "TOPICS/construction.md",
+    "SOURCES/HEARINGS/2025/2025-01-15 House Business.md",
+    "GOVERNMENTS/Board of Professional Counselors and Marriage and Family Therapists.md",
+    "TOPICS/counselors.md",
+    "TOPICS/therapists.md",
+    "TOPICS/interstate compact.md",
+    "SOURCES/HEARINGS/2025",
+    "news med",
     "PLACES/LIBRARIES",
-    "TOPICS/drag.md",
-    "TOPICS/drag queen story time.md",
-    "PEOPLE/Richard Spencer.md",
-    "SOURCES/x hey you make sure to link these/2017-02-12 - Buzzfeed News - Love Lives In Whitefish, Montana, But So Do Neo-Nazis.md",
-    "TOPICS/gender identity.md",
-    "ORGANIZATIONS/Reading Time with the Queens.md",
-    "SOURCES/x hey you make sure to link these/Idaho State Journal 2023-02-17 Members of local Christian congregations hold sit-in protest against Pocatello drag queen reading program.md",
-    "PLACES/LIBRARIES/Marshall Public Library.md",
-    "PEOPLE/Larry Echo Hawk.md",
-    "SOURCES/x hey you make sure to link these/2018-04-26 - Buzzfeed News - Could Paulette Jordan Be The First Native American Governor.md",
-    "GOVERNMENTS/IDAHO - LEGISLATIVE/Idaho Legislature.md",
-    "PLACES/LOCATIONS/Idaho Capitol.md",
-    "GOVERNMENTS/USA - TRIBES/Coeur d'Alene Tribe.md",
-    "ORGANIZATIONS/POLITICS/Health Freedom Idaho.md",
-    "PEOPLE/Sara Walton Brady.md",
-    "TOPICS/HEALTH/DISEASES/coronavirus.md",
-    "SOURCES/x hey you make sure to link these/2020-04-22 - Buzzfeed - There's More To Know About The Video Of A Mother Arrested On A Playground For Violating Stay-At-Home Orders.md",
-    "GOVERNMENTS/IDAHO - EXECUTIVE/COUNTIES & CITIES/city council.md",
-    "SOURCES/x hey you make sure to link these/2016-08-12 - Sandpoint Reader - Anti-abortion protesters disrupt community.md",
-    "SOURCES/x hey you make sure to link these/2023-08-13 - Sandpoint Reader - Woodward will seek Dist. 1 Senate seat.md",
-    "SOURCES/x hey you make sure to link these/2023-08-01 - Idaho Capital Sun - Former Idaho congressional candidate named to GOP national committee.md",
-    "SOURCES/x hey you make sure to link these/2023-12-14 - Idaho Statesman & ProPublica - Idaho Republicans are discussing a proposal that would make it easier to repair schools.md",
-    "SOURCES/x hey you make sure to link these/2024-05-23 - Idaho Press - Governor seeks outside lawyer in ITD lawsuit.md",
-    "SOURCES/x hey you make sure to link these/2024-01-04 - MOON - Turning to a Convention of States in Times of National Crisis is Not the Answer.md",
-    "SOURCES/x hey you make sure to link these/2024-02-02 - Idaho Education News - The election money race; an early Top 10 list.md",
     "ATTACHMENTS/MAPS/Snake River Dams.jpg",
     "SOURCES/HEARINGS/2024",
     "X LABELER",
@@ -266,9 +273,6 @@
     "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 1 - Historic Context.pdf",
     "ATTACHMENTS/DOCUMENTS/Broadband Strategic Plan.pdf",
     "ATTACHMENTS/DOCUMENTS",
-    "ATTACHMENTS/TEMPLATES",
-    "ATTACHMENTS/MAPS",
-    "ATTACHMENTS/MAPS/Legislative District Map 2021.pdf",
     "Pasted image 20231121102332.png"
   ]
 }

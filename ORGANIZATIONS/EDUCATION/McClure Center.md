@@ -1,1 +1,1 @@
-[[University of Idaho]]'s James A. and Louise McClure Center for Public Policy Research 
+[[University of Idaho]] James A. and Louise McClure Center for Public Policy Research 

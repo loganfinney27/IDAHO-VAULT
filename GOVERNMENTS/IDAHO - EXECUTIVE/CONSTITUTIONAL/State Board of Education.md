@@ -1,6 +1,9 @@
 ---
 aliases:
   - SBOE
+  - Idaho State Board of Education
+  - state board
+  - board of education
 tags:
   - position/appointed/boards-commissions
   - schools

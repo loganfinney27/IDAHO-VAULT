@@ -1,6 +1,10 @@
 ---
 aliases:
   - colleges and universities
+  - university
+  - college
+  - universities
+  - colleges
 tags:
   - schools/colleges/state
 ---
