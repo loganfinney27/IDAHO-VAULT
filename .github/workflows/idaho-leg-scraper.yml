@@ -2,12 +2,10 @@ name: Idaho Legislature Scraper
 
 on:
   # Run every day at 6 AM Mountain Time (13:00 UTC)
-  # The Idaho legislative session typically runs January–April.
-  # The schedule is kept year-round so special sessions are captured too.
   schedule:
     - cron: "0 13 * * *"
 
-  # Allow manual triggers with extra options
+  # Triggerable from GitHub mobile → Actions tab → Run workflow
   workflow_dispatch:
     inputs:
       year:
@@ -38,6 +36,7 @@ jobs:
 
     permissions:
       contents: write
+      issues: write    # needed to post digest comments
 
     steps:
       - name: Checkout vault
@@ -56,6 +55,7 @@ jobs:
         run: pip install -r .github/scripts/requirements-scraper.txt
 
       - name: Run scraper
+        id: scrape
         env:
           YEAR:    ${{ github.event.inputs.year    || '2026' }}
           FORCE:   ${{ github.event.inputs.force   || 'false' }}
@@ -63,36 +63,53 @@ jobs:
           MEMBERS: ${{ github.event.inputs.members  || 'false' }}
         run: |
           ARGS="--year $YEAR"
-
-          if [ "$FORCE" = "true" ]; then
-            ARGS="$ARGS --force"
-          fi
-
-          if [ -n "$BILL" ]; then
-            ARGS="$ARGS --bill $BILL"
-          fi
-
-          if [ "$MEMBERS" = "true" ]; then
-            ARGS="$ARGS --members"
-          fi
+          [ "$FORCE"   = "true" ] && ARGS="$ARGS --force"
+          [ -n "$BILL" ]          && ARGS="$ARGS --bill $BILL"
+          [ "$MEMBERS" = "true" ] && ARGS="$ARGS --members"
 
           python3 .github/scripts/idaho_leg_scraper.py $ARGS
 
+          # Capture which bill files changed for the digest
+          git diff --name-only HEAD \
+            "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/" 2>/dev/null \
+            | grep '\.md$' > /tmp/changed_bills.txt || true
+
+          git diff --name-only HEAD \
+            "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/" --diff-filter=A 2>/dev/null \
+            | grep '\.md$' > /tmp/new_bills.txt || true
+
+          echo "changed=$(wc -l < /tmp/changed_bills.txt)" >> $GITHUB_OUTPUT
+          echo "new=$(wc -l < /tmp/new_bills.txt)"         >> $GITHUB_OUTPUT
+
       - name: Commit changes
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage vault content that the scraper may have touched
           git add "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/"
           git add "GOVERNMENTS/IDAHO - LEGISLATIVE/SESSIONS/"
           git add "GOVERNMENTS/IDAHO - LEGISLATIVE/IDAHO HOUSE/"
           git add "GOVERNMENTS/IDAHO - LEGISLATIVE/IDAHO SENATE/"
 
           if git diff --cached --quiet; then
+            echo "committed=false" >> $GITHUB_OUTPUT
             echo "No changes to commit."
           else
             CHANGED=$(git diff --cached --name-only | wc -l)
             git commit -m "scrape Idaho legislature — ${CHANGED} file(s) $(date -u +%Y-%m-%d)"
             git push
+            echo "committed=true"  >> $GITHUB_OUTPUT
+            echo "file_count=${CHANGED}" >> $GITHUB_OUTPUT
           fi
+
+      - name: Post digest comment to tracking issue
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YEAR:     ${{ github.event.inputs.year || '2026' }}
+        run: |
+          python3 .github/scripts/post_digest.py \
+            --changed-file /tmp/changed_bills.txt \
+            --new-file     /tmp/new_bills.txt \
+            --year         "$YEAR"

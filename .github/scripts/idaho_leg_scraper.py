@@ -209,13 +209,19 @@ def parse_bill_id(raw: str) -> tuple[str, str, str, str]:
 
     Returns (bill_type, number, alias, url_fragment)
       bill_type    → 'HB', 'SB', 'HCR', …
-      number       → '1', '42', '101', … (no leading zeros)
-      alias        → 'HB 1', 'SB 42', 'HCR 101', …
-      url_fragment → 'H0001', 'S0042', 'HCR001', …   (as used in URLs)
+      number       → '1', '42', '1365', … (no leading zeros, for display)
+      alias        → 'HB 1', 'SB 42', 'HCR 1', …
+      url_fragment → 'H0001', 'S1365', 'HCR001', 'SJM114', …  (as used in URLs)
+
+    Padding rules on the Idaho legislature site:
+      Single-char URL prefix (H, S): always 4-digit zero-padded → H0001, S1365
+      Multi-char URL prefix (HCR, SJM, …): original digits preserved → HCR001, SJM114
+
+    Display-form aliases like "HB 24" or "H.B. 24" are normalised to the
+    URL-form prefix ("H") before processing.
     """
     raw = raw.strip().upper()
-
-    # Remove common separators: "H 0001" → "H0001", "H. 0001" → "H0001"
+    # Collapse spaces and dots: "H. B. 24" → "HB24", "H 0024" → "H0024"
     raw = re.sub(r'[\s.]+', '', raw)
 
     match = re.fullmatch(r'([A-Z]+)(\d+)', raw)
@@ -224,16 +230,22 @@ def parse_bill_id(raw: str) -> tuple[str, str, str, str]:
         return raw, "", raw, raw
 
     prefix, num_str = match.groups()
-    bill_type = URL_PREFIX_MAP.get(prefix, prefix)
-    number = str(int(num_str))           # strip leading zeros
-    padded = num_str.zfill(4)            # keep 4-digit zero-padded for URL
 
-    # URL fragment: single-letter prefixes use the original letter; multi-letter use the full prefix
-    if len(prefix) == 1:
-        url_fragment = f"{prefix}{padded}"
+    # Normalise display-form prefixes to their URL-form equivalents
+    # e.g. "HB" (display) → "H" (URL prefix); "SB" → "S"
+    _DISPLAY_TO_URL: dict[str, str] = {"HB": "H", "SB": "S"}
+    url_prefix = _DISPLAY_TO_URL.get(prefix, prefix)
+
+    bill_type = URL_PREFIX_MAP.get(url_prefix, url_prefix)
+    number = str(int(num_str))   # strip leading zeros for human-readable display
+
+    # Single-char prefixes use 4-digit zero-padding; multi-char preserve original
+    if len(url_prefix) == 1:
+        padded = num_str.zfill(4)
     else:
-        url_fragment = f"{prefix}{padded}"
+        padded = num_str         # e.g. "001" stays "001", "114" stays "114"
 
+    url_fragment = f"{url_prefix}{padded}"
     alias = f"{bill_type} {number}"
     return bill_type, number, alias, url_fragment
 
@@ -294,12 +306,21 @@ def get_bill_list(year: str) -> list[dict]:
 
 
 def _find_bill_table(soup: BeautifulSoup | None) -> Tag | None:
-    """Return the first <table> that has at least one link matching a bill URL."""
+    """
+    Return the first <table> that has multiple rows linking to individual bill
+    pages (e.g. /legislation/h0001/ or /legislation/scr001/).
+
+    Requires at least 3 bill links to avoid matching incidental navigation
+    elements that happen to contain a single bill reference.
+    """
     if soup is None:
         return None
-    bill_link_re = re.compile(r'/legislation/[a-z]+\d+/', re.I)
+    # Match paths like /legislation/h0001/ or /legislation/scr042/ —
+    # one or more letters followed by 3–4 digits, not "minidata" or bare "/legislation/"
+    bill_link_re = re.compile(r'/legislation/[a-z]{1,4}\d{3,4}/', re.I)
     for table in soup.find_all("table"):
-        if table.find("a", href=bill_link_re):
+        matches = table.find_all("a", href=bill_link_re)
+        if len(matches) >= 3:
             return table
     return None
 
@@ -533,10 +554,15 @@ def _extract_intro_and_description(soup: BeautifulSoup) -> tuple[str, str]:
 def _extract_action_history(soup: BeautifulSoup) -> list[dict]:
     """
     Parse the bill's legislative action history from any table on the page
-    that contains date-formatted entries (MM/DD).
+    that contains date-formatted entries.
+
+    Handles these Idaho legislature date formats:
+      MM/DD           e.g. "1/13" or "01/13"   (most common)
+      MM/DD/YYYY      e.g. "1/13/2026"          (occasionally used)
     """
     history: list[dict] = []
-    date_re = re.compile(r'^\d{1,2}/\d{1,2}$')
+    # Accept MM/DD or MM/DD/YYYY; capture only MM/DD for normalised output
+    date_re = re.compile(r'^(\d{1,2}/\d{1,2})(?:/\d{2,4})?$')
 
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
@@ -547,12 +573,13 @@ def _extract_action_history(soup: BeautifulSoup) -> list[dict]:
             if len(cells) < 2:
                 continue
 
-            # Check if first cell looks like a date (MM/DD)
+            # Check if first cell looks like a date (MM/DD or MM/DD/YYYY)
             cell0 = cells[0].get_text(strip=True)
-            if not date_re.match(cell0):
+            date_match = date_re.match(cell0)
+            if not date_match:
                 continue
 
-            date_str = cell0
+            date_str = date_match.group(1)  # normalised MM/DD only
             action_text = cells[1].get_text(" ", strip=True)
 
             entry: dict = {"date": date_str, "action": action_text}
@@ -693,6 +720,9 @@ def bill_to_markdown(data: dict, year: str) -> str:
         for s in active_sponsors:
             lines.append(f'  - "[[{s}]]"')
 
+    # last_action stored verbatim so last_action_changed() can exact-match it
+    if last_action:
+        lines.append(f'last_action: "{last_action}"')
     lines.append(f'scraped: "{now_str}"')
     lines.append("---")
     lines.append("")
@@ -754,13 +784,20 @@ def is_bill_finalized(filepath: Path) -> bool:
 def last_action_changed(filepath: Path, new_last_action: str) -> bool:
     """
     Return True if the last_action from the minidata listing differs from
-    what is recorded in the existing markdown file.
+    what is stored in the existing markdown file's last-action frontmatter key.
+
+    We write `last_action: "..."` into the frontmatter on every save so we can
+    do an exact-match comparison here rather than a loose substring search.
     """
     if not filepath.exists():
         return True  # File doesn't exist → needs creation
     existing = filepath.read_text(encoding="utf-8")
-    # The last_action text appears somewhere in the history section
-    return new_last_action.strip() not in existing
+    # Look for the exact frontmatter key we write
+    stored_m = re.search(r'^last_action:\s*"(.+)"', existing, re.M)
+    if not stored_m:
+        # Older file without the key — treat as changed so we refresh it
+        return True
+    return stored_m.group(1).strip() != new_last_action.strip()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -847,9 +884,11 @@ def scrape_bills(
         else:
             if filepath.exists():
                 old = filepath.read_text(encoding="utf-8")
-                # Compare ignoring the scraped timestamp line
-                old_body = re.sub(r'^scraped:.*$', '', old, flags=re.M)
-                new_body = re.sub(r'^scraped:.*$', '', markdown, flags=re.M)
+                # Compare ignoring volatile frontmatter lines (timestamp only;
+                # last_action IS intentionally included so status changes register)
+                _strip = lambda t: re.sub(r'^scraped:.*$', '', t, flags=re.M)
+                old_body = _strip(old)
+                new_body = _strip(markdown)
                 if old_body == new_body:
                     log.debug("  Content unchanged: %s", filename)
                     unchanged_count += 1
@@ -1102,8 +1141,32 @@ def scrape_members(year: str, dry_run: bool = False) -> tuple[int, int, int]:
 # Session note updater
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _idaho_legislature_number(year: int) -> tuple[int, int]:
+    """
+    Return (legislature_number, session_ordinal) for a given year.
+
+    Idaho Legislature numbering:
+      64th  2017-2018   (1st session = 2017, 2nd = 2018)
+      65th  2019-2020
+      66th  2021-2022
+      67th  2023-2024
+      68th  2025-2026
+      69th  2027-2028  …
+    Each legislature spans two calendar years; odd years = 1st session,
+    even years = 2nd session.
+    """
+    # 64th legislature started in 2017
+    offset = year - 2017
+    legislature = 64 + offset // 2
+    session_ordinal = 1 if year % 2 == 1 else 2
+    return legislature, session_ordinal
+
+
+_ORDINAL = {1: "1st", 2: "2nd", 3: "3rd"}
+
+
 def ensure_session_note(year: str) -> None:
-    """Create the session note if it doesn't already exist."""
+    """Create the session note for *year* if it doesn't already exist."""
     sessions_dir = VAULT_ROOT / "GOVERNMENTS" / "IDAHO - LEGISLATIVE" / "SESSIONS"
     sessions_dir.mkdir(parents=True, exist_ok=True)
     session_file = sessions_dir / f"{year} legislative session.md"
@@ -1112,16 +1175,18 @@ def ensure_session_note(year: str) -> None:
         log.debug("Session note already exists: %s", session_file.name)
         return
 
-    # Determine session number (67th legislature = 2024; 68th = 2025/2026)
-    # 2026 is the 2nd regular session of the 68th Idaho Legislature
+    yr = int(year)
+    leg_num, sess_ord = _idaho_legislature_number(yr)
+    sess_label = _ORDINAL.get(sess_ord, f"{sess_ord}th")
+    # Idaho regular sessions convene the second Monday of January
     content = (
         f"---\n"
         f"tags:\n"
         f"  - {year}/session\n"
         f"---\n"
-        f"2nd [[legislative session|Regular Session]] of the 68th [[Idaho Legislature]]\n\n"
-        f"Session convened: January 13, {year}\n\n"
-        f"Bills: [[GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS]]\n"
+        f"{sess_label} [[legislative session|Regular Session]] "
+        f"of the {leg_num}th [[Idaho Legislature]]\n\n"
+        f"Session convened: January {year}\n"
     )
     session_file.write_text(content, encoding="utf-8")
     log.info("Created session note: %s", session_file.name)
