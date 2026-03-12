@@ -11,15 +11,13 @@
             "id": "c595eb7652f0ebf1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "!ADMINISTRATION/!README.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Untitled.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "!README"
+              "icon": "lucide-table",
+              "title": "Untitled"
             }
           }
         ]
@@ -123,12 +121,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "!ADMINISTRATION/!README.md",
+                "file": "Untitled.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from !README"
+              "title": "Outgoing links from Untitled"
             }
           },
           {
@@ -208,6 +206,8 @@
   },
   "active": "c595eb7652f0ebf1",
   "lastOpenFiles": [
+    "Untitled 1.base",
+    "Untitled.base",
     "!ADMINISTRATION/!README.md",
     "!ADMINISTRATION",
     "X LABELER/x hey you make sure to link these/Article 2020-02-21 4-H students gather for government conference.md",
@@ -239,12 +239,10 @@
     "ATTACHMENTS/DOCUMENTS/Broadband Strategic Plan.pdf",
     "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 1 - Historic Context.pdf",
     "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 2 - Application of the National Register of Historic Places Criteria for Evaluation.pdf",
-    "X LABELER/x hey you make sure to link these/2023-12-15 - Idaho Statesman & ProPublica- Idaho hasn’t assessed school buildings for 30 years; Students and educators helped us do it.md",
     "SOURCES/HEARINGS/2025",
     "news med",
     "PLACES/LIBRARIES",
     "ATTACHMENTS/MAPS/Snake River Dams.jpg",
-    "SOURCES/HEARINGS/2024",
     "ATTACHMENTS/MAPS/Wildlife Management Units.png",
     "Pasted image 20231121102332.png"
   ]

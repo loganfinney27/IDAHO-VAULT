@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Untitled.base"
+    },
+    {
+      "basename": "Untitled 1",
+      "path": "Untitled 1.base"
+    },
+    {
       "basename": "!README",
       "path": "!ADMINISTRATION/!README.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Article 2020-03-13 Statehouse roundup; March Madness",
       "path": "X LABELER/x hey you make sure to link these/Article 2020-03-13 Statehouse roundup; March Madness.md"
-    },
-    {
-      "basename": "Rexburg",
-      "path": "PLACES/CITIES/Rexburg.md"
-    },
-    {
-      "basename": "realtors",
-      "path": "TOPICS/ECONOMY/RESIDENTIAL/realtors.md"
     }
   ],
   "omittedPaths": [],
