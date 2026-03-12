@@ -1,0 +1,25 @@
+name: Vault Sort Audit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sort-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+
+      - name: Run sort audit
+        run: python3 .github/scripts/sort_audit.py
+
+      - name: Commit audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "!ADMINISTRATION/"
+          git diff --cached --quiet || git commit -m "sort audit $(date -u +%Y-%m-%d)"
+          git push
