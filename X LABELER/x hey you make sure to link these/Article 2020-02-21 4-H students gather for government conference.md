@@ -3,8 +3,7 @@ tags:
   - media/articles
   - 2020/02/21
 ---
-
-https://www.loganfinney.com/idaho-legislature-2020/2/21/4-h-government-conference 
+Secondary source: https://www.loganfinney.com/idaho-legislature-2020/2/21/4-h-government-conference 
 
 [[Logan Finney]], [[McClure Center]] 
 

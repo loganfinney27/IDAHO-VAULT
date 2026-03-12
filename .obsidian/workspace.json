@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "93188ef460444d0a",
+        "id": "38480291482917a4",
         "type": "tabs",
         "children": [
           {
-            "id": "64dc4d0152320f06",
+            "id": "33f940a4d7ff1c24",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -80,8 +80,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -119,11 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "TOPICS/holy book.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from holy book"
             }
           },
           {
@@ -201,8 +201,14 @@
       "templates:Insert template": false
     }
   },
-  "active": "64dc4d0152320f06",
+  "active": "dbfa8ac519a0bb94",
   "lastOpenFiles": [
+    "!ADMINISTRATION",
+    "X LABELER/x hey you make sure to link these/Article 2020-02-21 4-H students gather for government conference.md",
+    "X LABELER/x hey you make sure to link these/2022-03-23- Idaho Capital Sun - McGeachin casts tie-breaking vote to pass medical school tuition payback bill.md",
+    "GOVERNMENTS/IDAHO - EXECUTIVE/COUNTIES & CITIES/city council.md",
+    "TOPICS/EDUCATION/HIGHER EDUCATION/WWAMI joint medical education program.md",
+    "PEOPLE/Sophia DeKlotz.md",
     "TOPICS/STATE AFFAIRS/LGBTQ+ issues.md",
     "TOPICS/gender identity.md",
     "TOPICS/holy book.md",
@@ -219,7 +225,7 @@
     "TOPICS/temples.md",
     "TOPICS/places of worship.md",
     "TOPICS/the Civil War.md",
-    "SOURCES/x hey you make sure to link these/2017-02-12 - Buzzfeed News - Love Lives In Whitefish, Montana, But So Do Neo-Nazis.md",
+    "X LABELER/x hey you make sure to link these/2017-02-12 - Buzzfeed News - Love Lives In Whitefish, Montana, But So Do Neo-Nazis.md",
     "TOPICS/Islam.md",
     "TOPICS/Torah.md",
     "ATTACHMENTS/DOCUMENTS/History of Property Tax in Idaho.pdf",
@@ -227,13 +233,7 @@
     "ATTACHMENTS/DOCUMENTS/Broadband Strategic Plan.pdf",
     "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 1 - Historic Context.pdf",
     "ATTACHMENTS/DOCUMENTS/Historic Survey of Roads in Idaho’s State Highway System Volume 2 - Application of the National Register of Historic Places Criteria for Evaluation.pdf",
-    "SOURCES/x hey you make sure to link these/2023-12-15 - Idaho Statesman & ProPublica- Idaho hasn’t assessed school buildings for 30 years; Students and educators helped us do it.md",
-    "SOURCES/x hey you make sure to link these/2025-06-09 - Valley Lookout - Citizen group seeks to file complaint about taxpayer subsidies to St. Luke’s McCall.md",
-    "SOURCES/x hey you make sure to link these/Idaho Education News 2021-08-26 Indoctrination task force calls on Legislature to make slew of changes.md",
-    "SOURCES/x hey you make sure to link these/FIRE 2021-08-05 Idaho education task force may threaten academic freedom.md",
-    "SOURCES/x hey you make sure to link these/Article 2023-09-21 Idaho GOP not hearing Bingham County appeal on Saturday (updated).md",
-    "SOURCES/x hey you make sure to link these/Article 2020-02-21 4-H students gather for government conference.md",
-    "SOURCES/x hey you make sure to link these/Article 2020-03-03 Legislature aims to refine initiative process.md",
+    "X LABELER/x hey you make sure to link these/2023-12-15 - Idaho Statesman & ProPublica- Idaho hasn’t assessed school buildings for 30 years; Students and educators helped us do it.md",
     "SOURCES/HEARINGS/2025",
     "news med",
     "PLACES/LIBRARIES",
