@@ -99,26 +99,27 @@ The following items from LEVELSET-v2.md are now stale:
 
 ## DECISIONS CURRENT STATE
 
-Five decisions logged in DECISIONS.md (all 2026-03-13):
+Twelve decisions logged in DECISIONS.md (all 2026-03-13):
 
 1. LEVELSET protocol established
 2. CLAUDE.md created
 3. Conversation taxonomy adopted
 4. File type attribution rules
 5. Sort audit and legislature scraper deployed
+6. Option A sequencing for LEVELSET synthesis
+7. LEVELSET-CURRENT as rolling synthesis document
+8. *(reserved)* — PERSISTENT: CODE AUTHORITY designation — **HELD** pending session type taxonomy definition (#13)
+9. LEVELSET promoted to persistent state layer
+10. Session-open and session-close protocols defined (implementation pending full adoption)
+11. Task assignment lives in !ADMINISTRATION, not conversation memory
+12. Handoff/handshake built into LEVELSET workflow
+13. Session type taxonomy needs formal definition (open task)
 
-### Decisions Made During This Session Not Yet Logged
+### Decisions Held
 
-| # | Decision | Context | Source | Status |
-|---|---|---|---|---|
-| 6 | Option A sequencing for LEVELSET synthesis | CODE AUTHORITY owns synthesis; TASK: LEVELSET provides content routing; Logan routes between them | CODE AUTHORITY session | **Pending Logan review** |
-| 7 | LEVELSET-CURRENT as rolling synthesis document | Distinguished from numbered LEVELSET snapshots (permanent) vs CURRENT (living, updated each round) | CODE AUTHORITY session | **Pending Logan review** |
-| 8 | PERSISTENT: CODE AUTHORITY designation | This Claude Code session flagged as persistent authoritative entry | CODE AUTHORITY session | **Pending Logan review** |
-| 9 | LEVELSET promoted to persistent state layer | LEVELSET is canonical shared memory for all Claude instances. All sessions read on open, write on close. | JFAC Open Meetings, 2026-03-12 | **Pending Logan review** |
-| 10 | Session-open and session-close protocols formalized | Open: fetch LEVELSET-CURRENT, read fully, confirm to Logan. Close: produce labeled cache block, hand to Logan for routing. | JFAC Open Meetings, 2026-03-12 | **Pending Logan review** |
-| 11 | Task assignment lives in !ADMINISTRATION, not conversation memory | Persistent task tracking belongs in committed files, not ephemeral context | JFAC Open Meetings, 2026-03-12 | **Pending Logan review** |
-| 12 | Handoff/handshake built into LEVELSET workflow | Not a separate procedure — it IS the session-open protocol | JFAC Open Meetings, 2026-03-12 | **Pending Logan review** |
-| 13 | Session type taxonomy needs formal definition | Current informal types: STORY, ISSUE, TASK, PERSISTENT, PROJECT. Status: PENDING formalization | JFAC Open Meetings, 2026-03-12 | **Pending Logan review** |
+| # | Decision | Condition | Status |
+|---|---|---|---|
+| 8 | PERSISTENT: CODE AUTHORITY designation | Contingent on #13 taxonomy work producing a formal definition that includes CODE AUTHORITY | **HELD** — not in DECISIONS.md |
 
 ---
 
@@ -259,7 +260,7 @@ Updated with JFAC session incorporation:
 
 | Item | Priority | Notes |
 |---|---|---|
-| Review 8 pending decisions (#6–#13) for DECISIONS.md | **High** | 3 from CODE AUTHORITY session + 5 from JFAC session. All staged in this document, none appended to DECISIONS.md yet. |
+| ~~Review 8 pending decisions (#6–#13) for DECISIONS.md~~ | ~~**High**~~ | **DONE** — 7 approved and appended. #8 held pending #13 taxonomy work. |
 | Merge feature branches to main | **High** | Both branches have substantive work. CLAUDE.md on main is the highest-impact merge. |
 | Audio verify JFAC quotes (5 quotes + speaker IDs) | **High** | HARD GATE for publication. See Pending Verification Queue above. |
 | Ethics.md creation | Medium | No draft exists anywhere in the ecosystem |
@@ -304,11 +305,10 @@ Transparency about gaps — this section exists so Logan and other conversations
 
 1. ~~Commit LEVELSET-CURRENT.md to separate branch~~ — Done
 2. ~~Wait for JFAC session cache block from Logan~~ — Received and incorporated
-3. **Flag Logan for review** — THIS COMMIT. Logan reviews:
-   - Full JFAC session incorporation in LEVELSET-CURRENT.md
-   - 8 pending decisions (#6–#13) before they are appended to DECISIONS.md
-4. After Logan approval: append approved decisions to DECISIONS.md
+3. ~~Flag Logan for review of 8 pending decisions~~ — Done
+4. ~~Append 7 approved decisions to DECISIONS.md~~ — Done (#8 held)
 5. Coordinate merge to `claude/levelset-multi-conversation-zWxJc` and ultimately to main
+6. Complete #13 taxonomy definition work, then unblock #8
 
 ---
 
