@@ -124,7 +124,7 @@ Claude instances operate as a swarm — specialized, tiered infrastructure under
 - Tier 3 — Read/analysis only. No direct commits.
 **Known conversations (as of 2026-03-13):**
 - PERSISTENT: ADMINISTRATION (this conversation) — Tier 2. Constitutional layer, conventions, judgment calls.
-- PERSISTENT: CODE AUTHORITY — Tier 1. Direct repo access, bulk structural work.
+- PERMANENT: CODE AUTHORITY — Tier 1. Direct repo access, bulk structural work. Central coding agent.
 - STORY: JFAC Open Meetings — Tier 1. Bulk vault work, direct repo access.
 - TASK: LEVELSET reports — Tier 3. Synthesis and auditing. LEVELSET on hold.
 - PROJECT: 2026 Budget Tracker — scope unknown.
@@ -132,7 +132,7 @@ Claude instances operate as a swarm — specialized, tiered infrastructure under
 **Language:**
 - Markdown = human product, attributable to Logan
 - Python = machine/procedural, attributable to Claude
-**LEVELSET status:** On hold. Primary work happening in PERSISTENT: ADMINISTRATION and PERSISTENT: CODE AUTHORITY.
+**LEVELSET status:** On hold. Primary work happening in PERSISTENT: ADMINISTRATION and PERMANENT: CODE AUTHORITY.
 ---
 ## Pending Items
 - [ ] Push updated `sort_audit.py` (v2) via `vault_push.py`

@@ -30,7 +30,7 @@ This is LEVELSET v2. LEVELSET is a permanent, auditable checkpoint protocol. You
 ## SECTION 5: CONVERSATION DISCOVERY
 Known conversations as of LEVELSET v2:
 1. PERSISTENT: ADMINISTRATION
-2. PERSISTENT: CODE AUTHORITY
+2. PERMANENT: CODE AUTHORITY
 3. TASK: LEVELSET reports
 4. STORY: JFAC Open Meetings
 5. PROJECT: 2026 Budget Tracker

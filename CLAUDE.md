@@ -155,6 +155,7 @@ Claude conversations follow a naming convention:
 
 | Prefix | Purpose |
 |---|---|
+| PERMANENT: | Central, non-deletable conversations |
 | PERSISTENT: | Long-running, role-specific conversations |
 | TASK: | Bounded, completable work items |
 | STORY: | Journalism story development |

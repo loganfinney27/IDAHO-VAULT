@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-13
 **Status:** CANONICAL — Single-source-of-truth
-**Authored by:** PERSISTENT: CODE AUTHORITY (Claude Code, Tier 1)
+**Authored by:** PERMANENT: CODE AUTHORITY (Claude Code, Tier 1)
 **Approved by:** Logan Finney
 
 ---
@@ -71,7 +71,7 @@ IDAHO-VAULT/
 
 | Conversation | Tier | Role | Known Output | Status |
 |---|---|---|---|---|
-| **PERSISTENT: CODE AUTHORITY** (this session) | 1 | Authoritative code session; LEVELSET synthesis | This document | Active |
+| **PERMANENT: CODE AUTHORITY** (this session) | 1 | Authoritative code session; LEVELSET synthesis | This document | Active |
 | **PERSISTENT: ADMINISTRATION** | Unknown | Vault governance, CLAUDE.md, Ethics.md | Unknown — nothing committed to repo | Unknown |
 | **TASK: LEVELSET reports** | Unknown | LEVELSET synthesis hub | Distributed LEVELSET v2 prompt | Active |
 | **STORY: JFAC Open Meetings** | Unknown | Journalism story | Unknown | Unknown |
@@ -197,4 +197,4 @@ The naming convention (PERSISTENT, TASK, STORY, PROJECT, ISSUE, INQUIRY) is stro
 
 ---
 
-*LEVELSET-v2.md — Generated 2026-03-13 by PERSISTENT: CODE AUTHORITY (Claude Code, Tier 1). This is the canonical synthesis document for LEVELSET round 2.*
+*LEVELSET-v2.md — Generated 2026-03-13 by PERMANENT: CODE AUTHORITY (Claude Code, Tier 1). This is the canonical synthesis document for LEVELSET round 2.*

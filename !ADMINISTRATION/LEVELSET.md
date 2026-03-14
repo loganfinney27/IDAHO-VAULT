@@ -22,7 +22,7 @@ Are you aware of any files or folders that multiple conversations may have touch
 **The pipeline:** GitHub Actions workflows for sort audit, proposed moves, and Wayback Machine integration. Scripts live in `.github/scripts/`.
 **Division of labor:**
 - PERSISTENT: ADMINISTRATION — Tier 2. Constitutional layer, conventions, judgment calls.
-- PERSISTENT: CODE AUTHORITY — Tier 1. Direct repo access, bulk structural work.
+- PERMANENT: CODE AUTHORITY — Tier 1. Direct repo access, bulk structural work.
 - STORY: JFAC Open Meetings — Tier 1. Bulk vault work.
 - TASK: LEVELSET reports — Tier 3. Synthesis. Currently on hold.
 **Guiding principles:**
