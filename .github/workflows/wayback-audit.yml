@@ -1,0 +1,45 @@
+name: Wayback Machine Audit
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8am UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Limit to N URLs (0 = all, use small number for testing)'
+        required: false
+        default: '0'
+      save:
+        description: 'Submit dead URLs to Save Page Now'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  wayback-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+
+      - name: Run Wayback audit
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.save }}" = "true" ]; then
+            ARGS="$ARGS --save"
+          fi
+          if [ "${{ github.event.inputs.limit }}" != "0" ] && [ -n "${{ github.event.inputs.limit }}" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          python3 .github/scripts/wayback_audit.py $ARGS
+
+      - name: Commit audit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "!ADMINISTRATION/"
+          git diff --cached --quiet || git commit -m "wayback audit $(date -u +%Y-%m-%d)"
+          git push

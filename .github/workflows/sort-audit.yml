@@ -1,6 +1,8 @@
 name: Vault Sort Audit
 
 on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 6am UTC
   workflow_dispatch:
 
 jobs:
@@ -8,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout vault

@@ -1,0 +1,42 @@
+name: Vault Propose Moves
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'  # Every Monday at 7am UTC (after audit completes)
+  workflow_dispatch:
+
+jobs:
+  propose-moves:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+
+      - name: Generate proposed moves
+        run: python3 .github/scripts/propose_moves.py
+
+      - name: Create pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="vault-moves-$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f ".github/proposed-moves.sh" ]; then
+            git checkout -b "$BRANCH"
+            git add .github/proposed-moves.sh "!ADMINISTRATION/"
+            git diff --cached --quiet && echo "No changes to propose" && exit 0
+            git commit -m "proposed moves $(date -u +%Y-%m-%d)"
+            git push origin "$BRANCH"
+            gh pr create \
+              --title "Proposed vault moves $(date -u +%Y-%m-%d)" \
+              --body-file .github/proposed-moves-summary.md \
+              --base main \
+              --head "$BRANCH"
+          else
+            echo "No moves to propose."
+          fi
