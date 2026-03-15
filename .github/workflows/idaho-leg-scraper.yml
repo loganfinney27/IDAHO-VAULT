@@ -1,0 +1,115 @@
+name: Idaho Legislature Scraper
+
+on:
+  # Run every day at 6 AM Mountain Time (13:00 UTC)
+  schedule:
+    - cron: "0 13 * * *"
+
+  # Triggerable from GitHub mobile → Actions tab → Run workflow
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Session year to scrape"
+        required: false
+        default: "2026"
+        type: string
+      force:
+        description: "Force re-fetch all bills (including finalized)"
+        required: false
+        default: "false"
+        type: boolean
+      bill:
+        description: "Scrape only one bill (e.g. H0001, S0042). Leave blank for all."
+        required: false
+        default: ""
+        type: string
+      members:
+        description: "Also scrape House/Senate member profiles"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  scrape:
+    name: Scrape Idaho Legislature
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: write    # needed to post digest comments
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: .github/scripts/requirements-scraper.txt
+
+      - name: Install dependencies
+        run: pip install -r .github/scripts/requirements-scraper.txt
+
+      - name: Run scraper
+        id: scrape
+        env:
+          YEAR:    ${{ github.event.inputs.year    || '2026' }}
+          FORCE:   ${{ github.event.inputs.force   || 'false' }}
+          BILL:    ${{ github.event.inputs.bill     || '' }}
+          MEMBERS: ${{ github.event.inputs.members  || 'false' }}
+        run: |
+          ARGS="--year $YEAR"
+          [ "$FORCE"   = "true" ] && ARGS="$ARGS --force"
+          [ -n "$BILL" ]          && ARGS="$ARGS --bill $BILL"
+          [ "$MEMBERS" = "true" ] && ARGS="$ARGS --members"
+
+          python3 .github/scripts/idaho_leg_scraper.py $ARGS
+
+          # Capture which bill files changed for the digest
+          git diff --name-only HEAD \
+            "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/" 2>/dev/null \
+            | grep '\.md$' > /tmp/changed_bills.txt || true
+
+          git diff --name-only HEAD \
+            "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/" --diff-filter=A 2>/dev/null \
+            | grep '\.md$' > /tmp/new_bills.txt || true
+
+          echo "changed=$(wc -l < /tmp/changed_bills.txt)" >> $GITHUB_OUTPUT
+          echo "new=$(wc -l < /tmp/new_bills.txt)"         >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add "GOVERNMENTS/IDAHO - LEGISLATIVE/BILLS/"
+          git add "GOVERNMENTS/IDAHO - LEGISLATIVE/SESSIONS/"
+          git add "GOVERNMENTS/IDAHO - LEGISLATIVE/IDAHO HOUSE/"
+          git add "GOVERNMENTS/IDAHO - LEGISLATIVE/IDAHO SENATE/"
+
+          if git diff --cached --quiet; then
+            echo "committed=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit."
+          else
+            CHANGED=$(git diff --cached --name-only | wc -l)
+            git commit -m "scrape Idaho legislature — ${CHANGED} file(s) $(date -u +%Y-%m-%d)"
+            git push
+            echo "committed=true"  >> $GITHUB_OUTPUT
+            echo "file_count=${CHANGED}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post digest comment to tracking issue
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YEAR:     ${{ github.event.inputs.year || '2026' }}
+        run: |
+          python3 .github/scripts/post_digest.py \
+            --changed-file /tmp/changed_bills.txt \
+            --new-file     /tmp/new_bills.txt \
+            --year         "$YEAR"

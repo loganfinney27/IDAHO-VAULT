@@ -1,0 +1,130 @@
+name: Wayback Preserve New URLs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'SOURCES/**'
+      - 'GOVERNMENTS/**'
+      - 'TOPICS/**'
+
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout vault
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Need previous commit to diff
+
+      - name: Extract new URLs from changed notes
+        id: extract
+        run: |
+          # Get files changed in this push
+          git diff --name-only HEAD~1 HEAD -- '*.md' > /tmp/changed_files.txt
+          echo "Changed files:"
+          cat /tmp/changed_files.txt
+
+          # Extract URL fields from changed files
+          python3 - << 'PYTHON'
+          import re, sys
+          from pathlib import Path
+
+          changed = Path("/tmp/changed_files.txt").read_text().splitlines()
+          urls = []
+          for f in changed:
+              p = Path(f)
+              if not p.exists() or p.suffix != ".md":
+                  continue
+              content = p.read_text(errors="replace")
+              m = re.search(r"^URL:\s*(.+)$", content, re.MULTILINE)
+              if m:
+                  url = m.group(1).strip()
+                  if url and "web.archive.org" not in url and url != "null":
+                      urls.append(url)
+
+          Path("/tmp/new_urls.txt").write_text("\n".join(urls))
+          print(f"Found {len(urls)} new URLs to preserve")
+          for u in urls:
+              print(f"  {u}")
+          PYTHON
+
+      - name: Submit to Save Page Now
+        run: |
+          python3 - << 'PYTHON'
+          import urllib.request, urllib.error, time
+          from pathlib import Path
+
+          UA = "IDAHO-VAULT/1.0 (Idaho Reports journalism archive; github.com/loganfinney27/IDAHO-VAULT)"
+          urls_file = Path("/tmp/new_urls.txt")
+          if not urls_file.exists():
+              print("No URLs file found, skipping")
+              exit(0)
+
+          urls = [u.strip() for u in urls_file.read_text().splitlines() if u.strip()]
+          if not urls:
+              print("No new URLs to preserve")
+              exit(0)
+
+          print(f"Submitting {len(urls)} URLs to Save Page Now...")
+          results = []
+          for url in urls:
+              save_url = f"https://web.archive.org/save/{url}"
+              try:
+                  req = urllib.request.Request(
+                      save_url,
+                      method="GET",
+                      headers={"User-Agent": UA, "Accept": "application/json"}
+                  )
+                  with urllib.request.urlopen(req, timeout=30) as resp:
+                      loc = resp.headers.get("Content-Location", "")
+                      archived = f"https://web.archive.org{loc}" if loc else save_url
+                      print(f"  ✅ {url[:70]}")
+                      print(f"     → {archived}")
+                      results.append((url, archived, True))
+              except Exception as e:
+                  print(f"  ❌ {url[:70]}: {e}")
+                  results.append((url, None, False))
+              time.sleep(5)  # SPN rate limit
+
+          # Write preservation log
+          from pathlib import Path
+          from datetime import datetime, timezone
+          import os
+
+          date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+          admin = Path("!ADMINISTRATION")
+          admin.mkdir(exist_ok=True)
+          log_path = admin / f"wayback-preserve-{date_str}.md"
+
+          lines = [
+              f"# Wayback Preservation Log — {date_str}",
+              "",
+              f"URLs submitted to Save Page Now on push to main.",
+              "",
+              "| URL | Archived | Status |",
+              "|---|---|---|",
+          ]
+          for url, archived, ok in results:
+              status = "✅" if ok else "❌"
+              arc = f"[snapshot]({archived})" if archived else "failed"
+              lines.append(f"| {url[:70]} | {arc} | {status} |")
+
+          log_path.write_text("\n".join(lines), encoding="utf-8")
+          print(f"\nLog written to {log_path}")
+          PYTHON
+
+      - name: Commit preservation log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "!ADMINISTRATION/"
+          if ! git diff --cached --quiet; then
+            git commit -m "wayback preservation log $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "Nothing to commit"
+          fi
