@@ -125,7 +125,7 @@ Use `[[Full Name]]` for all internal links — people, places, organizations, bi
 
 ## Governance
 
-This file provides operational instructions for Claude Code sessions. The canonical constitution is `!ADMIN/Claude.md`, maintained by PERSISTENT: ADMINISTRATION. When this file and `!ADMIN/Claude.md` conflict, `!ADMIN/Claude.md` governs.
+This file provides operational instructions for Claude Code sessions. The canonical constitution is `!ADMIN/Constitution.md`, maintained by PERSISTENT: ADMINISTRATION. When this file and `!ADMIN/Constitution.md` conflict, `!ADMIN/Constitution.md` governs.
 
 ## Automation
 
